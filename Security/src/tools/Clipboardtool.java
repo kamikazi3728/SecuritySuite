@@ -11,8 +11,8 @@ import java.awt.datatransfer.StringSelection;
  * -Puts the string given into the users clipboard
  */
 
-public class Clipboard {
-	public Clipboard(String theString){
+public class Clipboardtool {
+	public Clipboardtool(String theString){
 		StringSelection selection = new StringSelection(theString);
 	    java.awt.datatransfer.Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 	    clipboard.setContents(selection, selection);

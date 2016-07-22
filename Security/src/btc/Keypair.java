@@ -3,6 +3,7 @@ package btc;
 import java.security.SecureRandom;
 
 import org.bitcoinj.core.ECKey;
+import org.bitcoinj.params.MainNetParams;
 
 public class Keypair {
 	ECKey keypair;
@@ -16,7 +17,7 @@ public class Keypair {
 	}
 	
 	public String getpub(){
-		return keypair.getPublicKeyAsHex();
+		return keypair.toAddress(MainNetParams.get()).toString();
 	}
 	
 	public void setkey(String priv){

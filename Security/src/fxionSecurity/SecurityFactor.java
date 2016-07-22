@@ -21,7 +21,6 @@ abstract class SecurityFactor {
 	}
 	
 	private void reject() throws FactorException{
-		// DO SOMETHING IF REJECTED?
 		reset();
 		throw new FactorException();
 	}
