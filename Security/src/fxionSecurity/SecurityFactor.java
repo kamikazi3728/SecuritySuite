@@ -20,8 +20,9 @@ abstract class SecurityFactor {
 		greenlight = true;
 	}
 	
-	private void reject(){
+	private void reject() throws FactorException{
 		// DO SOMETHING IF REJECTED?
 		reset();
+		throw new FactorException();
 	}
 }
