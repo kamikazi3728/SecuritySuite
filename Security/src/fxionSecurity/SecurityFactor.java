@@ -16,4 +16,12 @@ abstract class SecurityFactor {
 		greenlight = false;
 	}
 	
+	private void accept(){
+		greenlight = true;
+	}
+	
+	private void reject(){
+		// DO SOMETHING IF REJECTED?
+		reset();
+	}
 }
