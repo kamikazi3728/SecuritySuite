@@ -1,5 +1,5 @@
 package fxionSecurity;
 
-public class Rfidkey {
+public class Rfidkey extends SecurityFactor{ //NOT STARTED
 
 }

@@ -6,10 +6,7 @@ import java.io.File;
 
 public class Usbkey extends SecurityFactor{
 	
-	//
-	
 	public Usbkey(String lockfile, String keyfile, String lockidentity, String keyidentity){
-		//get lock file
 		File lock = new File(lockfile);
 		File key = new File(keyfile);
 		if(lock.exists() && !lock.isDirectory()) { 
@@ -20,11 +17,9 @@ public class Usbkey extends SecurityFactor{
 				String input = keyreader.getisvl(keyidentity).getpart(2);
 				String inputhash = new Hasher().sha256(input);
 				if(inputhash.equalsIgnoreCase(storedhash)){
-					System.out.println("hashes equal");
 					accept();
 				}
 				else{
-					System.out.println("hashes unequal");
 					reject();
 				}
 			}
