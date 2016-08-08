@@ -12,15 +12,16 @@ public class Keypair {
 		keypair = new ECKey(new SecureRandom());
 	}
 	
+	@SuppressWarnings("deprecation")
 	public String getpriv(){
-		return keypair.getPrivateKeyAsHex();
+		return keypair.getPrivateKeyAsWiF(org.bitcoinj.core.NetworkParameters.prodNet());
 	}
 	
 	public String getpub(){
 		return keypair.toAddress(MainNetParams.get()).toString();
 	}
 	
-	public void setkey(String priv){
+	public void setkey(String priv){ //REDO WILL NOT WORK, hex input, needs Wif input
 		new ECKey();
 		keypair = ECKey.fromPrivate(hexStringToByteArray(priv));
 	}

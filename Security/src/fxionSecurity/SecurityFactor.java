@@ -16,12 +16,11 @@ abstract class SecurityFactor {
 		greenlight = false;
 	}
 	
-	private void accept(){
+	protected void accept(){
 		greenlight = true;
 	}
 	
-	private void reject() throws FactorException{
+	protected void reject(){
 		reset();
-		throw new FactorException();
 	}
 }
