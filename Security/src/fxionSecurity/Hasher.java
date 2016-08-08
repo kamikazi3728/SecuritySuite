@@ -2,7 +2,7 @@ package fxionSecurity;
 
 import java.security.MessageDigest;
 
-public class hasher {
+public class Hasher {
 	
 	public String sha256(String base) {
 	    try{

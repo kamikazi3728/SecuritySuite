@@ -1,13 +1,10 @@
 package fxionSecurity;
 
-import tools.Clipboardtool;
-import btc.Keypair;
-
-public class tester {
+public class Tester {
 	public static void main(String[] args){
-		new tester();
+		new Tester();
 	}
 	
-	public tester(){
+	public Tester(){
 	}
 }

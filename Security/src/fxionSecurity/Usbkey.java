@@ -4,11 +4,11 @@ import isvl.isvlReader;
 
 import java.io.File;
 
-public class usbkey extends SecurityFactor{
+public class Usbkey extends SecurityFactor{
 	
 	//
 	
-	public usbkey(String lockfile, String keyfile, String lockidentity, String keyidentity){
+	public Usbkey(String lockfile, String keyfile, String lockidentity, String keyidentity){
 		//get lock file
 		File lock = new File(lockfile);
 		File key = new File(keyfile);
@@ -18,7 +18,7 @@ public class usbkey extends SecurityFactor{
 				isvlReader keyreader = new isvlReader(keyfile);
 				String storedhash = lockreader.getisvl(lockidentity).getpart(2);
 				String input = keyreader.getisvl(keyidentity).getpart(2);
-				String inputhash = new hasher().sha256(input);
+				String inputhash = new Hasher().sha256(input);
 				if(inputhash.equalsIgnoreCase(storedhash)){
 					System.out.println("hashes equal");
 					accept();
